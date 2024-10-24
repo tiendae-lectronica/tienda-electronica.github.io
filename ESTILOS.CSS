@@ -1,0 +1,237 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center; 
+    background: linear-gradient(to right, #3a050515, #010314f3);
+    background-image: url('images/FFG.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(253, 252, 252);
+    position: relative; 
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1; 
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    width: 100%;
+    min-height: 100vh;
+    text-align: center; 
+    position: relative; 
+}
+
+/* Botón */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; 
+}
+
+.btn:hover {
+    background-color: #dd113d;
+    transform: scale(1.05); 
+}
+
+/* Títulos */
+h1, h2, p {
+    text-align: center; 
+    margin: 0.5rem 0;
+    animation: fadeInDown 1s ease-out; 
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+nav {
+    margin-top: 1rem;
+    text-align: center; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+    border: 2px solid white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li:hover {
+    background-color: #920bec;
+    transform: translateY(-5px); 
+}
+
+nav ul li a {
+    color: rgb(247, 246, 246);
+    text-decoration: none;
+}
+
+
+.team-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    z-index: 2;
+    animation: fadeInUp 1.5s ease-out; 
+}
+
+.team-member {
+    text-align: center; 
+    margin: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.1); 
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.logos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); 
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    animation: fadeIn 2s ease-out; 
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+}
+
+.piepag {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    animation: fadeIn 2.5s ease-out; 
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+.logo:hover {
+    transform: scale(1.2); 
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
